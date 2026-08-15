@@ -1,0 +1,36 @@
+{
+  "name": "create-ilha",
+  "version": "0.0.1",
+  "bin": "./dist/index.js",
+  "files": [
+    "dist"
+  ],
+  "type": "module",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "rslib",
+    "dev": "rslib --watch",
+    "format": "ultracite fix",
+    "lint": "ultracite check",
+    "prepare": "husky",
+    "start": "node ./dist/index.js",
+    "link": "pnpm add -g ."
+  },
+  "dependencies": {
+    "create-ilha": "link:"
+  },
+  "devDependencies": {
+    "@rslib/core": "^0.23.2",
+    "@types/node": "^24.13.2",
+    "husky": "^9.1.7",
+    "lint-staged": "^17.3.0",
+    "oxfmt": "^0.61.0",
+    "oxlint": "^1.76.0",
+    "typescript": "^6.0.3",
+    "ultracite": "7.9.4"
+  }
+}

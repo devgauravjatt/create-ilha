@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "lib": ["ES2022", "DOM"],
+    "noEmit": true,
+    "skipLibCheck": true,
+    "isolatedModules": true,
+    "resolveJsonModule": true,
+    "moduleResolution": "bundler",
+    "useDefineForClassFields": true,
+    "allowImportingTsExtensions": true,
+    "rootDir": "src",
+    "strictNullChecks": true
+  },
+  "include": ["src"]
+}
