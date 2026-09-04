@@ -8,8 +8,13 @@
     "moduleResolution": "bundler",
     "useDefineForClassFields": true,
     "allowImportingTsExtensions": true,
-    "rootDir": "src",
-    "strictNullChecks": true
+    "strictNullChecks": true,
+    "module": "ESNext",
+    "target": "ES2022",
+    "strict": true,
+    "types": ["node"],
+    "verbatimModuleSyntax": true
   },
-  "include": ["src"]
+  "include": ["src", "tests"],
+  "exclude": ["templates"]
 }

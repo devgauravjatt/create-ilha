@@ -1,0 +1,39 @@
+:root {
+  color-scheme: light dark;
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  line-height: 1.6;
+}
+
+body {
+  margin: 0;
+  background: #fbfbfd;
+  color: #14161a;
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background: #101115;
+    color: #f2f3f5;
+  }
+}
+
+.playground {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  max-width: 40rem;
+  margin: 0 auto;
+  padding: 3rem 1.5rem;
+}
+
+.playground__lede {
+  margin: 0;
+  opacity: 0.7;
+}
+
+.playground__row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  align-items: center;
+}

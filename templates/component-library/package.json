@@ -1,0 +1,44 @@
+{
+  "name": "{{projectName}}",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    },
+    "./elements": {
+      "types": "./dist/elements.d.ts",
+      "default": "./dist/elements.js"
+    },
+    "./styles.css": "./dist/styles.css"
+  },
+  "sideEffects": [
+    "./dist/elements.js",
+    "*.css"
+  ],
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build && tsc --project tsconfig.build.json",
+    "preview": "vite preview",
+    "typecheck": "tsc --noEmit"
+  },
+  "peerDependencies": {
+    "effect": "^4.0.0-rc.112",
+    "ilha": "^0.14.4"
+  },
+  "devDependencies": {
+    "@types/node": "^24",
+    "effect": "^4.0.0-rc.112",
+    "ilha": "^0.14.4",
+    "typescript": "^7.0.2",
+    "vite": "^8.2.2"
+  }
+}

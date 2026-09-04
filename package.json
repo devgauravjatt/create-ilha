@@ -1,9 +1,32 @@
 {
   "name": "create-ilha",
   "version": "0.0.1",
-  "bin": "./dist/index.js",
+  "description": "The official project scaffolding tool for Ilha.",
+  "keywords": [
+    "cli",
+    "create",
+    "ilha",
+    "islands",
+    "scaffold",
+    "starter",
+    "template",
+    "vite"
+  ],
+  "homepage": "https://github.com/devgauravjatt/create-ilha#readme",
+  "bugs": {
+    "url": "https://github.com/devgauravjatt/create-ilha/issues"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/devgauravjatt/create-ilha.git"
+  },
+  "bin": {
+    "create-ilha": "./dist/index.js"
+  },
   "files": [
-    "dist"
+    "dist",
+    "templates"
   ],
   "type": "module",
   "main": "./dist/index.js",
@@ -18,7 +41,9 @@
     "lint": "ultracite check",
     "prepare": "husky",
     "start": "node ./dist/index.js",
-    "link": "pnpm add -g ."
+    "link": "pnpm add -g .",
+    "test": "rslib && node --test tests/*.test.ts",
+    "typecheck": "tsc --noEmit"
   },
   "dependencies": {
     "create-ilha": "link:"
@@ -32,5 +57,8 @@
     "oxlint": "^1.76.0",
     "typescript": "^6.0.3",
     "ultracite": "7.9.4"
+  },
+  "engines": {
+    "node": ">=20"
   }
 }
