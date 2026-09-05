@@ -10,10 +10,6 @@ overrides:
 importers:
 
   .:
-    dependencies:
-      create-ilha:
-        specifier: 'link:'
-        version: 'link:'
     devDependencies:
       '@rslib/core':
         specifier: ^0.23.2
