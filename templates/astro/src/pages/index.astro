@@ -1,0 +1,33 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { Counter } from "../islands/counter";
+import { Newsletter } from "../islands/newsletter";
+---
+
+<Layout title="Home">
+  <section class="hero">
+    <h1>Static pages, interactive islands</h1>
+    <p>
+      Astro renders this page to HTML. The two components below are Ilha islands: each one
+      hydrates on its own terms, and nothing else ships JavaScript.
+    </p>
+  </section>
+
+  <section class="card">
+    <h2>client:load</h2>
+    <p>Hydrates as soon as the page loads.</p>
+    <Counter client:load start={3} />
+  </section>
+
+  <section class="card">
+    <h2>client:visible</h2>
+    <p>Waits until the island scrolls into view.</p>
+    <Newsletter client:visible cta="Join the list" />
+  </section>
+
+  <section class="card">
+    <h2>No directive</h2>
+    <p>Rendered on the server and left as static HTML — the buttons do nothing.</p>
+    <Counter start={42} />
+  </section>
+</Layout>

@@ -1,0 +1,141 @@
+:root {
+  color-scheme: light dark;
+  --bg: #fbfbfd;
+  --fg: #14161a;
+  --muted: #5c6370;
+  --border: #e3e5ea;
+  --accent: #6b46ff;
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  line-height: 1.6;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #101115;
+    --fg: #f2f3f5;
+    --muted: #9aa1ad;
+    --border: #24262d;
+  }
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--fg);
+}
+
+.site-header,
+main,
+footer {
+  max-width: 42rem;
+  margin: 0 auto;
+  padding: 1.5rem;
+}
+
+.site-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.site-title {
+  font-weight: 600;
+  text-decoration: none;
+  color: inherit;
+}
+
+nav {
+  display: flex;
+  gap: 1rem;
+}
+
+a {
+  color: var(--accent);
+}
+
+.hero h1 {
+  font-size: 2rem;
+  letter-spacing: -0.02em;
+  margin-bottom: 0.5rem;
+}
+
+.hero p {
+  color: var(--muted);
+}
+
+.card {
+  margin-top: 1.25rem;
+  padding: 1.25rem;
+  border: 1px solid var(--border);
+  border-radius: 0.75rem;
+}
+
+.card h2 {
+  margin: 0 0 0.25rem;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--muted);
+}
+
+.island {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-top: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.island button {
+  padding: 0.4rem 0.9rem;
+  font: inherit;
+  color: inherit;
+  background: transparent;
+  border: 1px solid var(--border);
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+.island button:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.island input {
+  flex: 1 1 14rem;
+  padding: 0.45rem 0.7rem;
+  font: inherit;
+  color: inherit;
+  background: transparent;
+  border: 1px solid var(--border);
+  border-radius: 0.5rem;
+}
+
+.island output {
+  font-variant-numeric: tabular-nums;
+  min-width: 2rem;
+  text-align: center;
+}
+
+.island__error {
+  color: #d13c3c;
+  font-size: 0.875rem;
+}
+
+.island--done {
+  color: var(--muted);
+}
+
+footer {
+  color: var(--muted);
+  font-size: 0.875rem;
+  border-top: 1px solid var(--border);
+}
+
+code {
+  padding: 0.1rem 0.35rem;
+  border: 1px solid var(--border);
+  border-radius: 0.35rem;
+  font-size: 0.85em;
+}

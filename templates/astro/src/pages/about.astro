@@ -1,0 +1,36 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="About">
+  <section class="hero">
+    <h1>About this template</h1>
+    <p>
+      <code>@ilha/astro</code> registers Ilha as an Astro renderer. Any component under <code
+        >src/islands/</code
+      > can be dropped into an <code>.astro</code> page and hydrated with a client directive.
+    </p>
+  </section>
+
+  <section class="card">
+    <h2>Directives</h2>
+    <ul>
+      <li><code>client:load</code> — hydrate immediately.</li>
+      <li><code>client:idle</code> — hydrate when the browser is idle.</li>
+      <li><code>client:visible</code> — hydrate when the island enters the viewport.</li>
+      <li><code>client:media</code> — hydrate when a media query matches.</li>
+      <li><code>client:only="@ilha/astro"</code> — skip SSR, mount in the browser.</li>
+    </ul>
+  </section>
+
+  <section class="card">
+    <h2>Good to know</h2>
+    <p>
+      Ilha components do not support Astro <code>&lt;slot /&gt;</code> forwarding — pass data
+      through props instead.
+    </p>
+    <p>
+      <a href="https://ilha.build/guide/astro/">Read the Astro guide →</a>
+    </p>
+  </section>
+</Layout>
