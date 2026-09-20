@@ -2,7 +2,7 @@
  * Package-manager detection plus the few child processes the CLI shells out to.
  */
 
-import { spawn } from "node:child_process";
+import { spawn } from "cross-spawn";
 
 export const PACKAGE_MANAGERS = ["npm", "pnpm", "yarn", "bun"] as const;
 
@@ -34,7 +34,6 @@ export const runCommand = (
   new Promise<void>((resolve, reject) => {
     const child = spawn(command, args, {
       cwd: options.cwd,
-      shell: process.platform === "win32",
       stdio: options.stdio ?? "ignore",
     });
     child.on("error", reject);
