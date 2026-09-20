@@ -12,14 +12,14 @@
     "template",
     "vite"
   ],
-  "homepage": "https://github.com/devgauravjatt/create-ilha#readme",
+  "homepage": "https://github.com/ilhajs/create-ilha#readme",
   "bugs": {
-    "url": "https://github.com/devgauravjatt/create-ilha/issues"
+    "url": "https://github.com/ilhajs/create-ilha/issues"
   },
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/devgauravjatt/create-ilha.git"
+    "url": "git+https://github.com/ilhajs/create-ilha.git"
   },
   "bin": {
     "create-ilha": "./dist/index.js"
