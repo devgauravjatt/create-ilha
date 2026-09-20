@@ -1,6 +1,6 @@
 {
   "name": "create-ilha",
-  "version": "0.5.0",
+  "version": "0.6.0",
   "description": "The official project scaffolding tool for Ilha.",
   "keywords": [
     "cli",
